@@ -10,50 +10,33 @@
 </head>
 <body>
 
-	<?php
-	## ENCRYPT FUNCTIONS
-		function enrot13($sifrelenecek) {
-		   $kaynak = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		   $hedef = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
-		   $yenikelime = strtr($sifrelenecek, $kaynak, $hedef);
-		   return $yenikelime;
-		}
-		
-	## DECRYPT FUNCTIONS
-		function derot13($sifrelenecek) {
-		   $kaynak = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
-		   $hedef = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		   $yenikelime = strtr($sifrelenecek, $kaynak, $hedef);
-		   return $yenikelime;
-		}
-	?>
-	
 		<ul class="menu">
 			<li><a href="index.php">Homepage</a></li>
 			<li><a href="http://batuhan.in" target="_blank">Developer</a></li>
 			<li><a href="http://batuhan.in/iletisim" target="_blank">Contact</a></li>
+			<li><a href="https://github.com/batuhankok/top-secret.git" target="_blank">Beta Version: 0.1.1</a></li>
 		</ul>
 		
 		
-		<div class="content" style="padding:20px 0px;">
-			<center><h1 style="color:#4f4f4f">Top Secret Communications Platform</h1></center>
+		<div class="content">
+			<center><h1>Top Secret Communications Platform</h1></center>
 		</div>
 		
 		
-		<form method="post" action="">
+		<form method="post" name="rootform" action="">
 		
 			<div class="content">
 				<textarea name="content" placeholder="Text here... Available languages: English (only)" class="tcontent"></textarea>
 			</div>
 			
-			<div class="content" style="width:97%;padding:10px 1%">
+			<div class="content">
 			<center>
 				<select name="type" class="select" id="">
-					<option value="en">Encrypt</option>
-					<option value="de">Decrypt</option>
+					<option value="enroot">Encrypt</option>
+					<option value="deroot">Decrypt</option>
 				</select>
 					
-				<input type="text" name="mail" class="input" placeholder="Send e-mail to this address." disabled/>
+				<input type="text" name="mail" class="input" placeholder="Send e-mail to this address. (close)" disabled/>
 				<input type="text" name="password" class="input" style="border: 1px solid #ff8484; border-left-color: #ff4f4f; border-top-color: #ff4f4f" placeholder="Your password (Required)"/>
 				
 				<input type="submit" class="submit" value="Okay →"/>
@@ -64,23 +47,27 @@
 		
 		
 		<?php
-		## Encrypting, decrypting
-			if(@$_POST){
+		require "crypt.php"; // Crypt functions
+		
+			## Encrypting, decrypting
+			if($_POST){
 	
-				$type = htmlspecialchars(@$_POST["type"]);
-				$content = htmlspecialchars(@$_POST["content"]);
-				$formpass = htmlspecialchars(trim(@$_POST["password"]));
+				$type = htmlspecialchars(trim($_POST["type"]));
+				$content = htmlspecialchars($_POST["content"]);
+				$formpass = htmlspecialchars(trim($_POST["password"]));
 				
 				## Valid passwords
-				$passwords= array("138376", "3924", "batuhan77");
+				$passwords= array("1234", "turkey");
 				
 				## Checking password...
 				if(in_array($formpass, $passwords)){
 				
 					## Result is shown here
-					echo '<div class="content" style="height:auto">';
-						if($type=="de"){ echo derot13($content); }elseif($type=="en"){ echo enrot13($content); }
-					echo '</div>';
+					echo '<div class="content"><textarea name="endecontent" class="tcontent">';
+					
+						if($type=="deroot"){ echo deroot($content); }elseif($type=="enroot"){ echo enroot($content); }
+						
+					echo '</textarea></div>';
 				
 				}
 				else {
