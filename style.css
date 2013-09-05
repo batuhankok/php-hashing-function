@@ -1,7 +1,7 @@
 /****************************************
 *	Coder:		  Batuhan Kök			*
 *	Fonts:		  Google Fonts			*
-*	Version:  	  0.1.0913				*
+*	Version:  	  0.1.1				*
 *	URL:		  http://batuhan.in		*
 ****************************************/
 
@@ -30,23 +30,27 @@
 		background-color: #222
 	}
 	.content {
-		width:99%;
+		width:97%;
 		font: 16px/22px 'Scada', tahoma; 
 		margin: 20px auto;
 		background: #fff;
-		padding: 10px 0px;
+		padding: 15px;
 		line-height: 25px;
 		border: 1px solid #ddd;
 		border-left-color: #bbb;
 		border-top-color: #bbb;
 		outline: 0;
 	}
+	.content h1 {
+		color: #555555;
+	}
 	.tcontent {
-		width:98%;
-		font: 16px/22px 'Scada', tahoma; 
+		width:100%;
+		font: 15px/20px 'Scada', tahoma; 
 		background: #fff;
-		height: 250px;
-		padding: 0.1% 1%; 
+		height: 180px;
+		padding: 0; 
+		margin:0;
 		resize: none;
 		outline: 0;
 	}	
@@ -59,7 +63,7 @@
 		border-top-color: #bbb;
 		outline: 0;
 		margin: 5px 0px;
-	}	
+	}
 	.submit {
 		font: 15px 'Scada', tahoma; 
 		padding: 8px 5px;
