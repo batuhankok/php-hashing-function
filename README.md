@@ -6,4 +6,4 @@ This encryption system name, Root. Note: Script is completely free.
 Beta Version: <b>0.1.1</b> (Available)<br />
 Now, new and stronger encryption algorithm!
 <hr />
-<h5>Developer: <a href="http://batuhan.in" title="Web Developer">Batuhan Kök</a></h5>
+<h5>Developer: <a href="http://batuhan.in" title="Web Developer" target="_blank">Batuhan Kök</a> / <a href="http://batuhan.in/projelerim" title="Other projects" target="_blank">Other projects.</a></h5>
