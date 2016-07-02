@@ -1,4 +1,4 @@
-# PHP Password Hashing Function (encoding-decoding)(symmetrical)
+#### PHP Password or String Hashing Function (encoding, decoding and symmetrical)
 This script encodes and decodes your text safely. Also, it can be **decode** your encoded text. It is completly free because my main reason is to provide everyone's benefit. If you have questions, you can contact me by using my blog or twitter.
 
 ##### You can develope yourself in these topics:
