@@ -1,7 +1,16 @@
-<h4>Top Secret Communication Script</h4>
-This script encodes your text safely. However, it can be decoded like every algorithm or password. This script is completly free because the main reason is to provide everyone's benefit. If you have questions, you can contact me by using my website/blog.
+# PHP Password Hashing Function (encoding-decoding)(symmetrical)
+This script encodes and decodes your text safely. Also, it can be **decode** your encoded text. It is completly free because my main reason is to provide everyone's benefit. If you have questions, you can contact me by using my blog or twitter.
+
+##### You can develope yourself in these topics:
+- Working with function.
+- Working with arrays.
+- Working with strings. // ` wordwrap(); ` ` strtr(); `
+- Working with ` base64_encode(); ` and ` base64_decode(); `.
+
+It requires **PHP 4.0** and above.
+
 <hr />
-Beta Version: <b>0.1.1</b> (Available)<br />
-Now, it has new and stronger encryption algorithm!
-<hr />
-<h5>Developer: <a href="http://batuhan.in" title="Web Developer" target="_blank">Batuhan Kök</a> / <a href="http://batuhan.in/projelerim" title="Other projects" target="_blank">Other projects.</a></h5>
+**Batuhan KÖK**
+| *Web & Mobile Developer*
+| [http://batuhan.me](http://www.batuhan.me)
+| [@BatuhanKok](http://twitter.com/BatuhanKok)
